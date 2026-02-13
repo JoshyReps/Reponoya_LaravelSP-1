@@ -73,6 +73,26 @@
     <x-navbar></x-navbar>
     <x-title>Student Portal</x-title>
 
+    <p>
+        <?php
+            if(DB::connection()->getPdo()) {
+                echo "Successfully connected to the database: ";
+            }
+
+
+            // $conn = mysqli_connect(env('DB_HOST'), env('DB_USERNAME'), env('DB_PASSWORD'), env('DB_DATABASE'));
+            // if (!$conn) {
+            //     echo("Connection failed: " . mysqli_connect_error());
+            // }
+            // $sql = "SELECT * FROM Student";
+            // $result = mysqli_query($conn, $sql);
+            // $students = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            // print_r($students);
+        ?>
+    </p>
+
+    
+
     <p><span>"</span> In the student's portal, you'll find not only academic resources but also the tools to mold character, build discipline, and inspire growth. <span>"</span></p>
 </body>
 </html>

@@ -90,31 +90,28 @@
     <x-navbar></x-navbar>
     <x-title>Student Add</x-title>
 
-    <form action="">
-
+    <form action="/addstudent" method="POST" id="studentForm">
+        @csrf
         <div class="input">
             <label for="name">Name</label>
-            <input type="text" placeholder="Name..." name="name">
+            <input type="text" placeholder="Name..." name="name" id="name" form="studentForm">
         </div>
         <div class="input">
-            <label for="name">Email</label>
-             <input type="email" placeholder="Email..." name="email">
+            <label for="email">Email</label>
+             <input type="email" placeholder="Email..." name="email" id="email" form="studentForm">
         </div>
         <div class="input">
-            <label for="name">Course</label>
-             <input type="text" placeholder="E.g BSCS" name="course">
+            <label for="course">Course</label>
+             <input type="text" placeholder="E.g BSCS" name="course" id="course" form="studentForm">
 
         </div>
         <div class="input">
-            <label for="name">Year</label>
-            <input type="text" placeholder="E.g 1" name="year">
+            <label for="year">Year</label>
+            <input type="text" placeholder="E.g 1" name="year" id="year" form="studentForm">
         </div>
-
+        <button type="submit" form="studentForm">Add Student</button>
+        
     </form>
-
-    <button>
-        Add Student
-    </button>
     <p>Currently Does not Work D:</p>
 
 </body>
